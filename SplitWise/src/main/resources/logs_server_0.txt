@@ -1,0 +1,72 @@
+|2023-02-08T00:37:02.206197700| : /127.0.0.1:57087:Unknown command:  passed
+|2023-02-08T00:38:51.909523800| : /127.0.0.1:57200:Unknown command:  passed
+|2023-02-08T00:39:51.900533600| : /127.0.0.1:57289:Unknown command:  passed
+|2023-02-08T00:44:28.322226200| : /127.0.0.1:57590:Unknown command: help
+ passed
+|2023-02-08T00
+:55:29.794693800| : /127.0.0.1:58066:Unknown command: help passed
+|2023-02-08T00:56:39.055822900| : /127.0.0.1:58133:No such user registered
+
+|2023-02-08T00:56:49.800739400| : /127.0.0.1:58133:Unknown command: help passed
+|2023-02-08T00:58:00.353255500| : /127.0.0.1:58233:No such user registered
+
+|2023-02-08T00:58:12.186382200| : /127.0.0.1:58233:Login Command with this number of arguments classifies as :Unknown command
+|2023-02-08T00:59:11.474278500| : There is a problem with the server socket: Connection reset
+|2023-02-08T00:59:27.535507700| : /127.0.0.1:58317:Login Command with this number of arguments classifies as :Unknown command
+
+|2023-02-08T00:59:33.651552600| : /127.0.0.1:58317:Unknown command: ligon passed
+|2023-02-08T01:00:27.129928800| : /127.0.0.1:58387:Login Command with this number of arguments classifies as :Unknown command
+
+|2023-02-08T01:00:29.622771800| : /127.0.0.1:58387:Login Command with this number of arguments classifies as :Unknown command
+
+|2023-02-08T01:00:31.464655500| : /127.0.0.1:58387:Unknown command: ligon passed
+
+|2023-02-08T01:00:33.940851200| : /127.0.0.1:58387:Login Command with this number of arguments classifies as :Unknown command
+
+|2023-02-08T01:00:40.397035100| : /127.0.0.1:58387:No such user registered
+
+|2023-02-08T12:04:23.414348100| : There is a problem with the server socket: Connection reset|2023-02-09T12:34:51.858470900| : Couldn't find user:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find user
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.repository.UserRegistry.getUserEntity(UserRegistry.java:41)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.CreateGroupCommand.execute(CreateGroupCommand.java:46)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:76)
+
+|2023-02-09T12:40:19.666486700| : Couldn't find user:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find user
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.repository.UserRegistry.getUserEntity(UserRegistry.java:41)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.CreateGroupCommand.execute(CreateGroupCommand.java:46)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:76)
+
+|2023-02-09T12:47:55.530549200| : Couldn't find user:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find user
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.repository.UserRegistry.getUserEntity(UserRegistry.java:41)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.CreateGroupCommand.execute(CreateGroupCommand.java:48)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:76)
+
+|2023-02-09T12:52:36.723588900| : Couldn't find user:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find user
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.repository.UserRegistry.getUserEntity(UserRegistry.java:41)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.CreateGroupCommand.execute(CreateGroupCommand.java:48)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:76)
+
+|2023-02-09T13:43:22.031239300| : Couldn't find user:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find user
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.repository.UserRegistry.getUserEntity(UserRegistry.java:41)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.CreateGroupCommand.execute(CreateGroupCommand.java:48)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:76)
+
+|2023-02-09T13:48:00.225771500| : Couldn't find user:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find user
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.repository.UserRegistry.getUserEntity(UserRegistry.java:41)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.CreateGroupCommand.execute(CreateGroupCommand.java:48)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:76)
+
+|2023-02-09T18:49:21.271048400| : There is a problem with the server socket: C:\Users\kalin\Desktop\SAP-JAVA\JavaProject\SplitWise\.\src\main\resources\users.json (The system cannot find the file specified)
+|2023-02-10T15:04:30.242357700| : /127.0.0.1:53753:ConversionFailiure: cache bug
+|2023-02-10T16:52:36.794131600| : Couldn't find user:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find user
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.getUserEntity(UserRegistry.java:65)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.CreateGroupCommand.execute(CreateGroupCommand.java:49)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:98)
+
+|2023-02-10T17:13:37.290137200| : There is a problem with the server socket: Connection reset

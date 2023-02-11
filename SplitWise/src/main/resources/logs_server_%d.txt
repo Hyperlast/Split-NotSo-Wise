@@ -1,0 +1,41 @@
+|2023-02-11T02:34:56.142966300| : Couldn't find a user with such name in your friend list:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find a user with such name in your friend list
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.updateRepoWithPayed(CommandRunner.java:116)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.PayedCommand.execute(PayedCommand.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:103)
+
+|2023-02-11T02:35:05.457972500| : Couldn't find a user with such name in your friend list:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find a user with such name in your friend list
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.updateRepoWithSplit(CommandRunner.java:89)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.SplitCommand.execute(SplitCommand.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:103)
+
+|2023-02-11T02:35:25.489755600| : Incorrect amount representation:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnrecognizedValueException: Incorrect amount representation
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandParser.checkIfCorrect(CommandParser.java:166)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.SplitGroupCommand.execute(SplitGroupCommand.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:103)
+
+|2023-02-11T02:36:44.626976400| : You are logged in, try to logout and type the command again!
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: You are logged in, try to logout and type the command again!
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isNotLogged(ConnectionObserver.java:49)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:35)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:103)
+
+|2023-02-11T02:36:51.498089600| : You are logged in, try to logout and type the command again!
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: You are logged in, try to logout and type the command again!
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isNotLogged(ConnectionObserver.java:49)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.RegisterCommand.execute(RegisterCommand.java:33)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:103)
+
+|2023-02-11T02:37:27.061967| : Incorrect amount representation:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnrecognizedValueException: Incorrect amount representation
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandParser.checkIfCorrect(CommandParser.java:166)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.checkAmount(CommandRunner.java:176)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.PayedCommand.execute(PayedCommand.java:35)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:103)
+
