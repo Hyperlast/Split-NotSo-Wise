@@ -1,10 +1,10 @@
 package bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository;
 
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.ClientHistory;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.UserParsed;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
 import com.google.gson.Gson;
 
@@ -84,7 +84,7 @@ public class UserRegistry {
         Validator.checkIfNull(userName);
         Validator.isBlank(userName);
 
-        if (!userCredentials.containsKey(userName)) {
+        if (userCredentials.containsKey(userName)) {
             throw new IncorrectCommandUsageException("User already exists" + System.lineSeparator());
         }
 
@@ -117,7 +117,7 @@ public class UserRegistry {
     public void isPasswordCorrect(String username, String password) throws IncorrectCommandUsageException {
         Validator.checkIfNull(username, password);
         Validator.isBlank(username, password);
-        doesExist(username);
+        doesNotExist(username);
 
         if (!userCredentials.get(username).equals(password)) {
             throw new IncorrectCommandUsageException("Wrong user info");

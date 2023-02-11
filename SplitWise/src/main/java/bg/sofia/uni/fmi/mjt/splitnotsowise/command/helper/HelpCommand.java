@@ -5,7 +5,7 @@ import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 
 public class HelpCommand implements Command {
-    private static final String HELP_MSG = "add-friend <username> (adds friend)"
+    public static final String HELP_MSG = "add-friend <username> (adds friend)"
             + System.lineSeparator() +
             "create-group <group_name> <username> <username> ... <username> (creates a group with users)"
             + System.lineSeparator() +

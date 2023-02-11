@@ -1,19 +1,18 @@
 package bg.sofia.uni.fmi.mjt.splitnotsowise.command;
 
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.Config;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnauthorizedAccessToServerDataException;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnrecognizedValueException;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.external.Currency;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.external.CurrencyCache;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.FriendListManager;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnrecognizedValueException;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.external.Currency;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.external.CurrencyCache;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -28,6 +27,12 @@ import static bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator.cr
 public final class CommandRunner {
 
     private static final UserRegistry REGISTRY = UserRegistry.getInstance();
+
+    private static boolean UPDATE_SERVER_FILES_TOGGLE = true;
+
+    public static void toggleSaveToDefaultFiles() {
+        UPDATE_SERVER_FILES_TOGGLE = false;
+    }
 
     public static void addToSameGroup(String groupName, GroupListManager group, User user) throws IOException {
         user.addToGroup(groupName, group);
@@ -116,7 +121,7 @@ public final class CommandRunner {
             throw new NoSuchEntityException("Couldn't find a user with such name in your friend list");
         }
 
-        REGISTRY.addTransaction(payerUsername, createPayedTransactionMessage(initiatorUsername, amount));
+        REGISTRY.addTransaction(payerUsername, createPayedTransactionMessage(initiatorUsername, amount, fieldCurrency));
         payer.addNotification(initiatorUsername
                 + " has accepted your last payment of: "
                 + amount
@@ -163,7 +168,7 @@ public final class CommandRunner {
     }
 
     public static User getUser(String socketChannel)
-            throws UnauthorizedAccessToServerDataException, NoSuchEntityException, IncorrectCommandUsageException {
+            throws NoSuchEntityException, IncorrectCommandUsageException {
 
         String username = ConnectionObserver.getUserName(socketChannel);
 
@@ -181,18 +186,22 @@ public final class CommandRunner {
     }
 
     public static void updateTransaction() throws IOException {
-        try (BufferedWriter transactionWriter = new BufferedWriter(new FileWriter(Config.TRANSACTION_CONFIG_PATH))) {
-            UserRegistry.getInstance().updateTransactionsMap(transactionWriter);
-            transactionWriter.flush();
+        if (UPDATE_SERVER_FILES_TOGGLE) {
+            try (BufferedWriter transactionWriter = new BufferedWriter(new FileWriter(Config.TRANSACTION_CONFIG_PATH))) {
+                UserRegistry.getInstance().updateTransactionsMap(transactionWriter);
+                transactionWriter.flush();
+            }
         }
+
     }
 
     public static void updateUserInfo() throws IOException {
-        try (BufferedWriter userWriter = new BufferedWriter(new FileWriter(Config.USER_CONFIG_PATH))) {
-            UserRegistry.getInstance().updateUserInfoMap(userWriter);
-            userWriter.flush();
+        if (UPDATE_SERVER_FILES_TOGGLE) {
+            try (BufferedWriter userWriter = new BufferedWriter(new FileWriter(Config.USER_CONFIG_PATH))) {
+                UserRegistry.getInstance().updateUserInfoMap(userWriter);
+                userWriter.flush();
+            }
         }
-
     }
 
 }

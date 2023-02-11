@@ -2,12 +2,10 @@ package bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social;
 
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
-
-import java.time.LocalDateTime;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 
 public class AddFriendCommand implements Command {
 
@@ -42,7 +40,7 @@ public class AddFriendCommand implements Command {
             return String.format(SUCCESS, args[FRIEND_USERNAME]);
 
         } catch (Exception e) {
-            logger.log(LocalDateTime.now(), OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
             return e.getMessage();
         }
     }

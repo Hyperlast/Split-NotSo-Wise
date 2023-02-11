@@ -5,7 +5,6 @@ import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
-
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
@@ -32,6 +31,10 @@ public class Logger {
         this.doesHandlerThrow = builder.doesHandlerThrow;
         this.doesCreateFiles = builder.doesCreateFiles;
         this.doesLog = builder.doesLog;
+    }
+
+    public static LoggerBuilder builder(String path, String fileName){
+        return new LoggerBuilder(path,fileName);
     }
 
     public static class LoggerBuilder {
@@ -86,12 +89,12 @@ public class Logger {
         return new BufferedWriter(new OutputStreamWriter(System.out));
     }
 
-    public void log(LocalDateTime timestamp, String msg, Writer writer) {
+    public void log(String msg, Writer writer) {
         if (!doesLog) {
             return;
         }
         createNonexistentLogFile();
-        LogMessage logMessage = createLog(timestamp, msg);
+        LogMessage logMessage = createLog(LocalDateTime.now(), msg);
         try (Writer logWriter = new BufferedWriter(writer)) {
             logWriter.write(logMessage.toString());
             logWriter.flush();

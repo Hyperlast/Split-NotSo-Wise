@@ -10,7 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 import static bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.Constants.SPACE_DELIMITER;
 import static bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator.DDOT_DELIMITER;
 

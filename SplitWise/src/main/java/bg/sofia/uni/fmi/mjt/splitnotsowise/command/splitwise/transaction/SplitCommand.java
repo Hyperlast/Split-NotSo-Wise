@@ -1,16 +1,13 @@
 package bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction;
 
-import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
-
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
-
+import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 public class SplitCommand implements Command {
     private static final String SUCCESS = "Successfully split";
@@ -35,13 +32,13 @@ public class SplitCommand implements Command {
         try {
             CommandRunner.checkAmount(args[AMOUNT], socketChannel, args[RECEIVER]);
             BigDecimal amount = BigDecimal.valueOf(Double.parseDouble(args[AMOUNT]));
-            Validator.checkAmount(amount);
+
             String username = ConnectionObserver.getUserName(socketChannel);
             CommandRunner.updateRepoWithSplit(username, args[RECEIVER], amount, args[REASON]);
 
             return SUCCESS;
         } catch (Exception e) {
-            logger.log(LocalDateTime.now(), OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
             return e.getMessage();
         }
     }

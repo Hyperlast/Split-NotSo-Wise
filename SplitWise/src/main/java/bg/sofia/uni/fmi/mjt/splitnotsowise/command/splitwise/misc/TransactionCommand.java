@@ -2,13 +2,11 @@ package bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.misc;
 
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
-
-import java.time.LocalDateTime;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 
 public class TransactionCommand implements Command {
 
@@ -27,7 +25,7 @@ public class TransactionCommand implements Command {
             User user = CommandRunner.getUser(socketChannel);
             return REGISTRY.getTransaction(user.getUsername());
         } catch (Exception e) {
-            logger.log(LocalDateTime.now(), OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
             return e.getMessage();
         }
 

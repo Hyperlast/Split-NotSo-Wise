@@ -1,16 +1,15 @@
 package bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction;
 
+import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandParser;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 public class SplitGroupCommand implements Command {
 
@@ -50,7 +49,7 @@ public class SplitGroupCommand implements Command {
 
             return SUCCESS;
         } catch (Exception e) {
-            logger.log(LocalDateTime.now(), OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
             return e.getMessage();
         }
     }

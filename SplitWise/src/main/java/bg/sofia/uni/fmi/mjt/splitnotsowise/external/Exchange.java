@@ -19,6 +19,7 @@ import static bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.Constants.DEFAUL
 
 public class Exchange {
 
+    private static Exchange instance;
     private static final int DAY_HOURS = 24;
     private static final int STATUS_OK = 200;
     private static final Gson GSON = new Gson();
@@ -32,21 +33,30 @@ public class Exchange {
 
     public static final String EXCHANGE_CONFIG_PATH = DEFAULT_LOG_DIR_PATH + DEFAULT_EXCHANGE_CONFIG_FILE_NAME;
 
-    private static void updateQueryTime() {
+    private Exchange() { }
+
+    public static Exchange getInstance() {
+        if (instance == null) {
+            return new Exchange();
+        }
+        return instance;
+    }
+
+    private  void updateQueryTime() {
         lastQuery = LocalDateTime.now();
     }
 
-    public static void addAPIKEY(String key) {
+    public void addAPIKEY(String key) {
         apiKey = key;
     }
-    public static boolean canQuery() {
+    public boolean canQuery() {
         if (lastQuery == null) {
             return true;
         }
         return ChronoUnit.HOURS.between(lastQuery, LocalDateTime.now()) >= DAY_HOURS;
     }
 
-    public static boolean getExchange(HttpClient client) throws IOException, InterruptedException,
+    public boolean getExchange(HttpClient client) throws IOException, InterruptedException,
             BadResponseException {
 
         if (!canQuery() || apiKey.isBlank()) {
@@ -63,11 +73,11 @@ public class Exchange {
 
         errorCheck(response);
 
-        System.out.println(response.body());
+        //System.out.println(response.body());
 
         CurrencyResponse result = GSON.fromJson(response.body(), CurrencyResponse.class);
 
-        System.out.println(result);
+        //System.out.println(result);
 
         CurrencyCache.getInstance().addRates(result);
         updateQueryTime();
@@ -75,18 +85,15 @@ public class Exchange {
         return true;
     }
 
-    public static void errorCheck(HttpResponse<String> response) throws BadResponseException {
+    public void errorCheck(HttpResponse<String> response) throws BadResponseException {
         int statusCode = response.statusCode();
 
-        if (statusCode == STATUS_OK) {
-            return;
-        }
-
-        for (ErrorResponse err: ErrorResponse.values()) {
-            if (err.getCode() == statusCode) {
-                throw new BadResponseException(statusCode, err.getMessage());
+        if (statusCode != STATUS_OK) {
+            for (ErrorResponse err: ErrorResponse.values()) {
+                if (err.getCode() == statusCode) {
+                    throw new BadResponseException(statusCode, err.getMessage());
+                }
             }
         }
-
     }
 }

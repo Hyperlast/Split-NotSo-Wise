@@ -14,15 +14,20 @@ public final class OutputCreator {
 
     public static final String USER_EXCEPTION_RETURN_MESSAGE = "Oops, something happened"
             + System.lineSeparator()
-            + "Try again later, or contact administrator"
-            + System.lineSeparator();
+            + "Try again later, or contact administrator with logs from -> ";
 
     public static final String DDOT_DELIMITER = ":";
 
     private OutputCreator() { }
 
-    public static String createPayedTransactionMessage(String receiver, BigDecimal amount) {
-        return LocalDateTime.now() + DDOT_DELIMITER + receiver + " was payed " + amount;
+    public static String createPayedTransactionMessage(String receiver, BigDecimal amount, Currency currency) {
+        return LocalDateTime.now()
+                + DDOT_DELIMITER
+                + receiver
+                + " was payed "
+                + amount
+                + SPACE_DELIMITER
+                + currency.getLabel();
     }
 
     public static String createSplitFriendTransactionMessage(String sender, BigDecimal amount,

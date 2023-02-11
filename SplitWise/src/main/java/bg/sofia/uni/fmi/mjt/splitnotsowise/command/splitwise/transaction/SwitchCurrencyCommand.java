@@ -15,7 +15,6 @@ import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 
 import java.io.IOException;
 import java.net.http.HttpClient;
-import java.time.LocalDateTime;
 
 public class SwitchCurrencyCommand implements Command {
 
@@ -57,7 +56,7 @@ public class SwitchCurrencyCommand implements Command {
             }
 
         } catch (Exception e) {
-            logger.log(LocalDateTime.now(), OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
             return e.getMessage();
         }
 
@@ -65,15 +64,16 @@ public class SwitchCurrencyCommand implements Command {
         return "Successful conversion" + System.lineSeparator();
     }
 
-    private void checkServiceAvailability(Currency wantedCurrency) throws NoServiceAvailableException {
-        if (!Exchange.canQuery() && !CurrencyCache.getInstance().isConversionAvailable(wantedCurrency)) {
+    public void checkServiceAvailability(Currency wantedCurrency) throws NoServiceAvailableException {
+        Exchange ins = Exchange.getInstance();
+        if (!ins.canQuery() && !CurrencyCache.getInstance().isConversionAvailable(wantedCurrency)) {
             throw new NoServiceAvailableException(UNAVAILABLE_SERVICE_MSG);
         }
     }
 
-    private void checkQueryAvailability(HttpClient httpClient, Currency wantedCurrency) throws BadResponseException,
+    public void checkQueryAvailability(HttpClient httpClient, Currency wantedCurrency) throws BadResponseException,
             IOException, InterruptedException, NoServiceAvailableException {
-        if (!Exchange.getExchange(httpClient) && !CurrencyCache.getInstance()
+        if (!Exchange.getInstance().getExchange(httpClient) && !CurrencyCache.getInstance()
                 .isConversionAvailable(wantedCurrency)) {
             throw new NoServiceAvailableException(UNAVAILABLE_SERVICE_MSG);
         }

@@ -1,9 +1,5 @@
 package bg.sofia.uni.fmi.mjt.splitnotsowise.utils;
 
-import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NegativeAmountException;
-
-import java.math.BigDecimal;
-
 public final class Validator {
 
     private static final String NULL_ARGUMENT_MESSAGE = "Null argument passed";
@@ -38,12 +34,6 @@ public final class Validator {
             if (s.isBlank()) {
                 throw new IllegalArgumentException("Empty or Blank arg passed");
             }
-        }
-    }
-
-    public static void checkAmount(BigDecimal amount) throws NegativeAmountException {
-        if (amount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new NegativeAmountException("Amount cannot be negative");
         }
     }
 

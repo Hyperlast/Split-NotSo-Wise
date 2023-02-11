@@ -1,17 +1,17 @@
 package bg.sofia.uni.fmi.mjt.splitnotsowise.command;
 
-import bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.AddFriendCommand;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.CreateGroupCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LogoutCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.RegisterCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.helper.HelpCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.helper.UnknownCommand;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.misc.StatusCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.misc.TransactionCommand;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.AddFriendCommand;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.CreateGroupCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.PayedCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.SplitCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.SplitGroupCommand;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.misc.StatusCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.SwitchCurrencyCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnrecognizedValueException;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;

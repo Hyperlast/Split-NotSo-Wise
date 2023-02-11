@@ -2,15 +2,12 @@ package bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth;
 
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
-
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.PasswordUtils;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
-
-import java.time.LocalDateTime;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 
 public class LoginCommand implements Command {
 
@@ -46,7 +43,7 @@ public class LoginCommand implements Command {
 
             return SUCCESS + notifications;
         } catch (Exception e) {
-            logger.log(LocalDateTime.now(), OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
             return e.getMessage();
         }
 

@@ -1,0 +1,164 @@
+|2023-02-11T13:00:00.249024700| : There is a problem with the server socket: Connection reset
+|2023-02-11T13:03:17.507135600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:90)
+
+|2023-02-11T13:03:21.329371800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:90)
+
+|2023-02-11T13:03:21.336354800| : Not logged in
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Not logged in
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isLogged(ConnectionObserver.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.misc.StatusCommand.execute(StatusCommand.java:23)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:111)
+
+|2023-02-11T13:03:24.793505400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:90)
+
+|2023-02-11T13:03:30.533267800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:90)
+
+|2023-02-11T13:03:32.827682600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:90)
+
+|2023-02-11T13:04:46.846426800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:90)
+
+|2023-02-11T13:04:55.310000600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:90)
+
+|2023-02-11T13:05:03.438791200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:90)
+
+|2023-02-11T13:05:03.439787600| : You are logged in, try to logout and type the command again!
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: You are logged in, try to logout and type the command again!
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isNotLogged(ConnectionObserver.java:48)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:32)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:111)
+
+|2023-02-11T13:05:14.226696100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:90)
+
+|2023-02-11T13:05:14.228689900| : You are logged in, try to logout and type the command again!
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: You are logged in, try to logout and type the command again!
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isNotLogged(ConnectionObserver.java:48)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.RegisterCommand.execute(RegisterCommand.java:30)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:111)
+
+|2023-02-11T13:05:22.308255700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:90)
+
+|2023-02-11T13:05:33.750415| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:90)
+
+|2023-02-11T13:07:20.148597500| : User already exists
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: User already exists
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.doesExist(UserRegistry.java:88)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.RegisterCommand.execute(RegisterCommand.java:32)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:111)
+
+|2023-02-11T13:07:31.213174100| : Not logged in
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Not logged in
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isLogged(ConnectionObserver.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.misc.StatusCommand.execute(StatusCommand.java:23)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:111)
+
+|2023-02-11T13:07:35.144859800| : Not logged in
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Not logged in
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isLogged(ConnectionObserver.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.SwitchCurrencyCommand.execute(SwitchCurrencyCommand.java:39)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:111)
+
+|2023-02-11T13:07:39.799123600| : Not logged in
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Not logged in
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isLogged(ConnectionObserver.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.checkAmount(CommandRunner.java:177)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.SplitCommand.execute(SplitCommand.java:33)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:111)
+
+|2023-02-11T13:07:44.392783300| : Incorrect amount representation:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnrecognizedValueException: Incorrect amount representation
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandParser.checkIfCorrect(CommandParser.java:166)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.checkAmount(CommandRunner.java:175)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.PayedCommand.execute(PayedCommand.java:33)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:111)
+
+|2023-02-11T13:07:47.906029400| : Not logged in
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Not logged in
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isLogged(ConnectionObserver.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.checkAmount(CommandRunner.java:177)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.PayedCommand.execute(PayedCommand.java:33)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:111)
+
+|2023-02-11T13:07:59.448888300| : Not logged in
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Not logged in
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isLogged(ConnectionObserver.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.SplitGroupCommand.execute(SplitGroupCommand.java:38)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:111)
+
+|2023-02-11T17:43:19.267360700| : Couldn't find a user with such name in your friend list:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find a user with such name in your friend list
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.updateRepoWithPayed(CommandRunner.java:121)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.PayedCommand.execute(PayedCommand.java:38)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:108)
+
+|2023-02-11T17:43:24.778393200| : Couldn't find a user with such name in your friend list:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find a user with such name in your friend list
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.updateRepoWithSplit(CommandRunner.java:94)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.SplitCommand.execute(SplitCommand.java:37)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:108)
+
+|2023-02-12T00:35:04.550068400| : User Doesn't exists
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: User Doesn't exists
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.doesNotExist(UserRegistry.java:98)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.isPasswordCorrect(UserRegistry.java:120)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:36)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:108)
+
+|2023-02-12T00:36:47.531499| : Couldn't find a user with such name in your friend list:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find a user with such name in your friend list
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.updateRepoWithSplit(CommandRunner.java:94)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.SplitCommand.execute(SplitCommand.java:37)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:108)
+

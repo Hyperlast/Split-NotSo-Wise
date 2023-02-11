@@ -6,7 +6,6 @@ import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.external.Currency;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.external.CurrencyCache;
 
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;

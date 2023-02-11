@@ -2,14 +2,13 @@ package bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social;
 
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 
-import java.time.LocalDateTime;
 import java.util.Arrays;
 
 
@@ -35,7 +34,7 @@ public class CreateGroupCommand implements Command {
             ConnectionObserver.isLogged(socketChannel);
 
             if (REGISTRY.doesGroupExist(args[GROUP_NAME])) {
-                return "Group with that name already exists\n";
+                return "Group with that name already exists" + System.lineSeparator();
             }
 
             GroupListManager groupDebtInstance = new GroupListManager();
@@ -50,7 +49,7 @@ public class CreateGroupCommand implements Command {
 
             return "SuccessFully created the group";
         } catch (Exception e) {
-            logger.log(LocalDateTime.now(), OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
             return e.getMessage();
         }
 

@@ -4,6 +4,7 @@ import bg.sofia.uni.fmi.mjt.splitnotsowise.database.Config;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.external.Exchange;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 import com.google.gson.stream.JsonReader;
 
 import java.io.BufferedReader;
@@ -18,7 +19,6 @@ import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.time.LocalDateTime;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -35,7 +35,7 @@ public class Server {
 
 
     public static void main(String[] args) {
-        Logger logger = new Logger.LoggerBuilder(DEFAULT_LOG_DIR_PATH, DEFAULT_SERVER_FILE_NAME)
+        Logger logger = Logger.builder(DEFAULT_LOG_DIR_PATH, DEFAULT_SERVER_FILE_NAME)
                 .setHandlerThrows(DEFAULT_LOG_THROW)
                 .setLogs(DEFAULT_LOG_LOGS)
                 .build();
@@ -45,8 +45,7 @@ public class Server {
              JsonReader userReader = new JsonReader(new FileReader(Config.USER_CONFIG_PATH));
              BufferedReader keyReader = new BufferedReader(new FileReader(Exchange.EXCHANGE_CONFIG_PATH))) {
 
-            Exchange.addAPIKEY(keyReader.readLine());
-
+            Exchange.getInstance().addAPIKEY(keyReader.readLine());
 
             InputHandler userHandler = new InputHandler(logger);
 
@@ -56,8 +55,6 @@ public class Server {
                     || !Files.exists(Path.of(Config.USER_CONFIG_PATH))) {
                 return;
             }
-
-
 
             config.loadTransactions(transactionReader);
             config.loadUsers(userReader);
@@ -85,8 +82,15 @@ public class Server {
                         SocketChannel sc = (SocketChannel) key.channel();
 
                         buffer.clear();
+                        int r;
+                        try {
+                            r = sc.read(buffer);
+                        } catch (IOException e) {
+                            logger.log("There is a problem with the server socket: " +
+                                            OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+                            continue;
+                        }
 
-                        int r = sc.read(buffer);
 
                         if (r < 0) {
                             String session = sc.socket().getInetAddress().toString();
@@ -120,8 +124,8 @@ public class Server {
             }
 
         } catch (IOException e) {
-            logger.log( LocalDateTime.now(),
-                    "There is a problem with the server socket: " + e.getMessage(),
+            e.printStackTrace();
+            logger.log("There is a problem with the server socket: " + e.getMessage(),
                     logger.getLogWriter());
 
         }

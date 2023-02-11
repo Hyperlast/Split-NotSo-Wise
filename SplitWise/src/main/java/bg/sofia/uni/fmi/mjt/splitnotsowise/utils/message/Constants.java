@@ -7,8 +7,8 @@ public final class Constants {
 
     public static final String SPACE_DELIMITER = " ";
     public static final String SEPARATOR = File.separator;
-    public static final String DEFAULT_SERVER_FILE_NAME = "logs_server_%d.txt";
-    public static final String DEFAULT_CLIENT_FILE_NAME = "logs_client_%d.txt";
+    public static final String DEFAULT_SERVER_FILE_NAME = "logs_server.txt";
+    public static final String DEFAULT_CLIENT_FILE_NAME = "logs_client.txt";
 
     public static final String DEFAULT_TRANSACTION_FILE_NAME = "transactions.json";
     public static final String DEFAULT_USER_FILE_NAME = "users.json";

@@ -1,15 +1,13 @@
 package bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction;
 
-import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandParser;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 public class PayedCommand implements Command {
 
@@ -34,16 +32,12 @@ public class PayedCommand implements Command {
         try {
             CommandRunner.checkAmount(args[AMOUNT], socketChannel, args[SENDER]);
             BigDecimal amount = BigDecimal.valueOf(Double.parseDouble(args[AMOUNT]));
-            Validator.checkAmount(amount);
-
             String username = ConnectionObserver.getUserName(socketChannel);
             CommandRunner.updateRepoWithPayed(username, args[SENDER], amount);
-
             return SUCCESS;
         } catch (Exception e) {
-            logger.log(LocalDateTime.now(), OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
             return e.getMessage();
         }
-
     }
 }

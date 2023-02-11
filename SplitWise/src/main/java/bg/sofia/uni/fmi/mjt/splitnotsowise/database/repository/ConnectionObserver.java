@@ -3,7 +3,6 @@ package bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
 
-
 import java.util.HashMap;
 import java.util.Map;
 
