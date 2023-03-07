@@ -1,7 +1,4 @@
-# Split-NotSo-Wise
-My project for selective course MJT
-
-# Task:
+# My project for selective course MJT
 
 # Split(NotSo)Wise :money_with_wings:
 
