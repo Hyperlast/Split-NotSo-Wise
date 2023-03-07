@@ -1,4 +1,4 @@
-# My project for selective course MJT
+# My implementation of project for selective course MJT
 
 # Split(NotSo)Wise :money_with_wings:
 
