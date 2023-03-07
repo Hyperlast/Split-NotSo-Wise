@@ -73,11 +73,7 @@ public class Exchange {
 
         errorCheck(response);
 
-        //System.out.println(response.body());
-
         CurrencyResponse result = GSON.fromJson(response.body(), CurrencyResponse.class);
-
-        //System.out.println(result);
 
         CurrencyCache.getInstance().addRates(result);
         updateQueryTime();

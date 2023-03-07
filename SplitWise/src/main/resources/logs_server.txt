@@ -162,3 +162,1357 @@
 	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
 	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:108)
 
+|2023-02-12T12:44:11.841159900| : Incorrect amount representation:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnrecognizedValueException: Incorrect amount representation
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandParser.checkIfCorrect(CommandParser.java:166)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.checkAmount(CommandRunner.java:181)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.PayedCommand.execute(PayedCommand.java:33)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-12T12:44:18.180819| : Not logged in
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Not logged in
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isLogged(ConnectionObserver.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.checkAmount(CommandRunner.java:183)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.PayedCommand.execute(PayedCommand.java:33)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-12T12:53:12.006360100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-12T12:53:17.528588500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-12T13:03:45.285299700| : Not logged in
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Not logged in
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isLogged(ConnectionObserver.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.misc.StatusCommand.execute(StatusCommand.java:23)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-12T13:05:29.080498100| : Couldn't find pavel:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find pavel
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.getUserEntity(UserRegistry.java:66)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.CreateGroupCommand.execute(CreateGroupCommand.java:42)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-13T16:36:06.007432800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:36:11.851745900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:36:11.860721| : Not logged in
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Not logged in
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isLogged(ConnectionObserver.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.misc.StatusCommand.execute(StatusCommand.java:23)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-13T16:36:13.760726900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:37:12.524223600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:37:12.527216| : Not logged in
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Not logged in
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isLogged(ConnectionObserver.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.AddFriendCommand.execute(AddFriendCommand.java:31)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-13T16:37:31.567647800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:37:40.035691900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:37:46.657745400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:37:56.295623600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:38:32.851250400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:38:32.852247700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:38:36.143067| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:38:36.144064600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:06.387754200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:06.388752| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:06.389749900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:12.034751| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:12.036746900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:12.037743100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:20.915398100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:20.916397300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:20.917394500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:26.861532300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:26.862527600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:26.863525200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:27.650930| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:27.651925200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:27.652924100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:32.369077700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:32.370077100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:32.370077100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:41.947652700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:41.948647800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:39:41.949646800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:40:23.964851600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:40:23.965850200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:40:23.967874800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:40:28.765863400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:40:28.766862100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:40:28.831686400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:40:33.342066400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:40:33.343063600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:40:33.344063100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:40:39.406969800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:40:39.407933300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:40:39.466775100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:41:17.178547800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:41:17.179543100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:41:17.180541200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:41:17.184531200| : Couldn't find Pavel:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoSuchEntityException: Couldn't find Pavel
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.getUserEntity(UserRegistry.java:66)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.CreateGroupCommand.execute(CreateGroupCommand.java:42)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-13T16:41:26.183191| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:41:26.184188400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:41:26.185186300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:41:39.429149700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:41:39.430148300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:41:39.432142| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:42:17.412529600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:42:17.413527| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:42:17.414524300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:42:20.506743400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:42:20.507742| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:42:20.507742| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:42:28.246506500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:42:28.248502700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:42:28.249499100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:42:53.794846800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:42:53.795845200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:42:53.796842500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:10.032675600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:10.034670100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:10.035667| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:12.818997600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:12.818997600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:12.820992600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:19.442756700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:19.443754600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:19.502597300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:28.272878900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:28.273875200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:28.274872900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:47.208558200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:47.210554900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:43:47.210554900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:15.958117400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:15.959116800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:15.960112200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:18.071042600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:18.072040800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:18.072040800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:28.583481600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:28.584480300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:28.585477500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:39.259905500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:39.261903300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:39.262899700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:52.931631| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:52.932628400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:44:52.933626400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:10.252050200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:10.253048300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:10.254044900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:10.254044900| : Incorrect amount representation:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnrecognizedValueException: Incorrect amount representation
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandParser.checkIfCorrect(CommandParser.java:166)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.checkAmount(CommandRunner.java:181)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.PayedCommand.execute(PayedCommand.java:33)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-13T16:45:19.630271| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:19.631270400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:19.632299200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:19.632299200| : Incorrect amount representation:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnrecognizedValueException: Incorrect amount representation
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandParser.checkIfCorrect(CommandParser.java:166)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.checkAmount(CommandRunner.java:181)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.PayedCommand.execute(PayedCommand.java:33)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-13T16:45:31.944044900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:31.946040600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:31.947037800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:49.898781900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:49.899780400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:49.900776300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:52.287434800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:52.288431700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:45:52.288431700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:00.631383100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:00.632379600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:00.633377700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:12.926884700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:12.927883300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:12.927883300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:25.070658600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:25.071654300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:25.072652| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:25.073648800| : Incorrect amount representation:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnrecognizedValueException: Incorrect amount representation
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandParser.checkIfCorrect(CommandParser.java:166)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.checkAmount(CommandRunner.java:181)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.SplitCommand.execute(SplitCommand.java:33)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-13T16:46:29.835352100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:29.837345200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:29.837345200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:29.838343500| : Incorrect amount representation:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnrecognizedValueException: Incorrect amount representation
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandParser.checkIfCorrect(CommandParser.java:166)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.checkAmount(CommandRunner.java:181)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.transaction.SplitCommand.execute(SplitCommand.java:33)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-13T16:46:35.470946500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:35.470946500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:35.471950400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:44.705872200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:44.706869400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:44.707866900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:51.134654200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:51.135651500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:51.135651500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:46:51.136648400| : You are logged in, try to logout and type the command again!
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: You are logged in, try to logout and type the command again!
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isNotLogged(ConnectionObserver.java:48)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:32)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-13T16:47:03.230592400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:47:03.231590100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:47:03.231590100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:47:03.232588500| : You are logged in, try to logout and type the command again!
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: You are logged in, try to logout and type the command again!
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isNotLogged(ConnectionObserver.java:48)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.RegisterCommand.execute(RegisterCommand.java:30)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:18)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-02-13T16:47:49.693055200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:47:49.694019900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:47:49.695017| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:47:54.868716700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:47:54.869685100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:47:54.870682700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:47:56.447278300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:47:56.447278300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:47:56.448274800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:48:08.797376100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:48:08.798373300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:48:08.799369200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:48:11.550996900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:48:11.552018600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:48:11.552018600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:48:22.857006700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:48:22.858004600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:48:22.859001600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:48:31.845000300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:48:31.845996400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:48:31.846993600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:49:01.175331400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:49:01.176328800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:49:01.177327200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:12.077716| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:12.078712500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:12.078712500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:13.678112100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:13.678112100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:13.679110200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:26.849082500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:26.850080200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:26.850080200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:47.433303900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:47.434301900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:47.434301900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:53.383758200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:53.384788400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:53.384788400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:55.888884600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:55.889881500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:50:55.889881500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:37.417596600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:37.418629100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:37.419591300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:39.178122100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:39.178122100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:39.179118500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:44.966238100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:44.967236900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:44.968233| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:46.216009100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:46.217006100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:46.218005600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:56.878736| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:56.878736| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:51:56.880730800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:52:01.603921300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:52:01.604918700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:52:01.697670500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:52:38.295196900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:52:38.296192700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:52:38.297192600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:52:49.566028900| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:52:49.567026500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:52:49.568028| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:53:07.027389400| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:53:07.028387500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:53:07.029384600| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:54:01.585698300| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:54:01.586696100| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:54:01.587693200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:54:01.587693200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:54:05.882736700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:54:05.883734700| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:54:05.884737| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-02-13T16:54:05.885730500| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:418)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-03-01T13:26:16.366290| : User already exists
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: User already exists
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.doesExist(UserRegistry.java:88)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.RegisterCommand.execute(RegisterCommand.java:31)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:26:29.707545600| : User Doesn't exists
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: User Doesn't exists
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.doesNotExist(UserRegistry.java:98)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.isPasswordCorrect(UserRegistry.java:120)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:35)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:26:35.443914800| : Wrong user info:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Wrong user info
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.isPasswordCorrect(UserRegistry.java:123)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:35)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:28:01.625307200| : Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null:java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getDebtMessage(GroupListManager.java:75)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.lambda$getStatus$0(GroupListManager.java:64)
+	at java.base/java.util.Map.forEach(Map.java:716)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getStatus(GroupListManager.java:59)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User.getFullStatus(User.java:119)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.getStatus(CommandRunner.java:167)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.misc.StatusCommand.execute(StatusCommand.java:25)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:28:10.616330700| : Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null:java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getDebtMessage(GroupListManager.java:75)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.lambda$getStatus$0(GroupListManager.java:64)
+	at java.base/java.util.Map.forEach(Map.java:716)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getStatus(GroupListManager.java:59)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User.getFullStatus(User.java:119)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.getStatus(CommandRunner.java:167)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.misc.StatusCommand.execute(StatusCommand.java:25)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:33:57.008690300| : Wrong user info:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Wrong user info
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.isPasswordCorrect(UserRegistry.java:123)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:35)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:34:04.509023900| : Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null:java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getDebtMessage(GroupListManager.java:75)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.lambda$getStatus$0(GroupListManager.java:64)
+	at java.base/java.util.Map.forEach(Map.java:716)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getStatus(GroupListManager.java:59)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User.getFullStatus(User.java:119)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.getStatus(CommandRunner.java:167)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.misc.StatusCommand.execute(StatusCommand.java:25)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:34:37.208970200| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-03-01T13:35:02.257708800| : There is a problem with the server socket: Connection reset:java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:87)
+
+|2023-03-01T13:37:19.109213200| : Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null:java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getDebtMessage(GroupListManager.java:75)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.lambda$getStatus$0(GroupListManager.java:64)
+	at java.base/java.util.Map.forEach(Map.java:716)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getStatus(GroupListManager.java:59)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User.getFullStatus(User.java:119)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.getStatus(CommandRunner.java:167)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.misc.StatusCommand.execute(StatusCommand.java:25)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:40:30.928518900| : Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null:java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getDebtMessage(GroupListManager.java:75)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.lambda$getStatus$0(GroupListManager.java:64)
+	at java.base/java.util.Map.forEach(Map.java:716)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getStatus(GroupListManager.java:59)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User.getFullStatus(User.java:119)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.getStatus(CommandRunner.java:167)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.misc.StatusCommand.execute(StatusCommand.java:25)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:41:02.862352500| : Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null:java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getDebtMessage(GroupListManager.java:75)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.lambda$getStatus$0(GroupListManager.java:64)
+	at java.base/java.util.Map.forEach(Map.java:716)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getStatus(GroupListManager.java:59)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User.getFullStatus(User.java:119)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.getStatus(CommandRunner.java:167)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.misc.StatusCommand.execute(StatusCommand.java:25)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:44:46.588448600| : Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null:java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getDebtMessage(GroupListManager.java:75)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.lambda$getStatus$0(GroupListManager.java:64)
+	at java.base/java.util.Map.forEach(Map.java:716)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getStatus(GroupListManager.java:59)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User.getFullStatus(User.java:119)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.getStatus(CommandRunner.java:167)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.misc.StatusCommand.execute(StatusCommand.java:25)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:51:59.955277800| : Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null:java.lang.NullPointerException: Cannot invoke "java.math.BigDecimal.compareTo(java.math.BigDecimal)" because "balance" is null
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getDebtMessage(GroupListManager.java:75)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.lambda$getStatus$0(GroupListManager.java:64)
+	at java.base/java.util.Map.forEach(Map.java:716)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager.getStatus(GroupListManager.java:59)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User.getFullStatus(User.java:119)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner.getStatus(CommandRunner.java:167)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.misc.StatusCommand.execute(StatusCommand.java:25)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:55:14.506606900| : Wrong user info:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Wrong user info
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.isPasswordCorrect(UserRegistry.java:123)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:35)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T13:55:17.911369400| : Wrong user info:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Wrong user info
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.isPasswordCorrect(UserRegistry.java:123)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:35)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T14:06:50.240158200| : Wrong user info:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Wrong user info
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.isPasswordCorrect(UserRegistry.java:123)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:35)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T14:08:24.717987100| : Wrong user info:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Wrong user info
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.isPasswordCorrect(UserRegistry.java:123)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:35)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T14:10:58.335186200| : User Doesn't exists
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: User Doesn't exists
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.doesNotExist(UserRegistry.java:98)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.isPasswordCorrect(UserRegistry.java:120)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:35)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T14:11:06.468908500| : Not logged in
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Not logged in
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver.isLogged(ConnectionObserver.java:40)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.misc.StatusCommand.execute(StatusCommand.java:23)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T14:12:34.921095800| : Wrong user info:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Wrong user info
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.isPasswordCorrect(UserRegistry.java:123)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:35)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-01T14:16:08.170530400| : Password must contain (one digit,one lowercase  character,one uppercase  character,one special character like ! @ # & ( ),Password length: 6 - 20 characters.
+:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.UnrecognizedValueException: Password must contain (one digit,one lowercase  character,one uppercase  character,one special character like ! @ # & ( ),Password length: 6 - 20 characters.
+
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.utils.PasswordUtils.verifyPasswordRegex(PasswordUtils.java:61)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.RegisterCommand.execute(RegisterCommand.java:30)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+
+|2023-03-07T11:55:42.746171400| : Wrong user info:bg.sofia.uni.fmi.mjt.splitnotsowise.exception.IncorrectCommandUsageException: Wrong user info
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.UserRegistry.isPasswordCorrect(UserRegistry.java:125)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand.execute(LoginCommand.java:35)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.InputHandler.executeInput(InputHandler.java:12)
+	at bg.sofia.uni.fmi.mjt.splitnotsowise.server.Server.main(Server.java:107)
+

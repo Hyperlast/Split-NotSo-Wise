@@ -2,7 +2,7 @@ package bg.sofia.uni.fmi.mjt.splitnotsowise.command.helper;
 
 
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
+
 
 public class HelpCommand implements Command {
     public static final String HELP_MSG = "add-friend <username> (adds friend)"
@@ -28,7 +28,7 @@ public class HelpCommand implements Command {
             + System.lineSeparator();
 
     @Override
-    public String execute(Logger logger) {
+    public String execute() {
         return HELP_MSG;
     }
 }

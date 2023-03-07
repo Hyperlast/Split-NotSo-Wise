@@ -19,8 +19,8 @@ import static bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.Constants.SPACE_
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
@@ -46,6 +46,7 @@ class CreateGroupCommandTest {
     @BeforeEach
     void initToggle() {
         CommandRunner.toggleSaveToDefaultFiles();
+        loginCommand.execute(logger);
     }
 
     @AfterEach
@@ -55,17 +56,20 @@ class CreateGroupCommandTest {
 
     @Test
     void testCreateGroupNotLoggedIn() {
+        logoutCommand.execute(logger);
         String[] args = "create-group bob bob".split(SPACE_DELIMITER);
         CreateGroupCommand createGroupCommand = new CreateGroupCommand(args, ADMIN_ADDRESS);
+
         assertEquals("Not logged in" + System.lineSeparator() , createGroupCommand.execute(logger),
                 "Expected not logged in user message");
     }
 
     @Test
     void testCreateExistingGroup() {
-        loginCommand.execute(logger);
+
         String[] args = "create-group bob friend1".split(SPACE_DELIMITER);
         CreateGroupCommand createGroupCommand = new CreateGroupCommand(args, ADMIN_ADDRESS);
+
         createGroupCommand.execute(logger);
         assertEquals( "Group with that name already exists" + System.lineSeparator() ,
                 createGroupCommand.execute(logger), "Expected a message for trying to create existing group");
@@ -74,11 +78,11 @@ class CreateGroupCommandTest {
 
     @Test
     void testCreateGroupWithNonRegisteredMember() {
-        loginCommand.execute(logger);
         Logger log = mock(Logger.class);
         String[] args = "create-group bob1 bob".split(SPACE_DELIMITER);
         CreateGroupCommand createGroupCommand = new CreateGroupCommand(args, ADMIN_ADDRESS);
+
         createGroupCommand.execute(log);
-        verify(log, atLeastOnce()).log(anyString(), any());
+        verify(log, times(1)).log(anyString(), any());
     }
 }

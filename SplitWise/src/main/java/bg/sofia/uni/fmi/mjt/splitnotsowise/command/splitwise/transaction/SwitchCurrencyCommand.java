@@ -9,7 +9,6 @@ import bg.sofia.uni.fmi.mjt.splitnotsowise.exception.NoServiceAvailableException
 import bg.sofia.uni.fmi.mjt.splitnotsowise.external.Currency;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.external.CurrencyCache;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.external.Exchange;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 
@@ -34,7 +33,7 @@ public class SwitchCurrencyCommand implements Command {
     }
 
     @Override
-    public String execute(Logger logger) {
+    public String execute() {
         try {
             ConnectionObserver.isLogged(socketChannel);
 
@@ -56,7 +55,7 @@ public class SwitchCurrencyCommand implements Command {
             }
 
         } catch (Exception e) {
-            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            LOGGER.log(OutputCreator.getFullExceptionMessage(e), LOGGER.getLogWriter());
             return e.getMessage();
         }
 

@@ -11,7 +11,6 @@ import com.google.gson.stream.JsonReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.HashMap;
 
 import static bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.Constants.DEFAULT_LOG_DIR_PATH;
 import static bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.Constants.DEFAULT_TRANSACTION_FILE_NAME;

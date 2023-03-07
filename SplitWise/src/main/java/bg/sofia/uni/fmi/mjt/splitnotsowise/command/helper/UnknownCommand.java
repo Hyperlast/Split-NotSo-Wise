@@ -1,7 +1,6 @@
 package bg.sofia.uni.fmi.mjt.splitnotsowise.command.helper;
 
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
 
 public class UnknownCommand implements Command {
@@ -19,7 +18,7 @@ public class UnknownCommand implements Command {
     }
 
     @Override
-    public String execute(Logger logger) {
+    public String execute() {
         return message;
     }
 }

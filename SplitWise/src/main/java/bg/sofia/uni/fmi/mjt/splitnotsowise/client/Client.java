@@ -40,13 +40,10 @@ public class Client {
 
             System.out.println(NEWLY_CONNECTED_CLIENT);
             while (true) {
-
-                String command = scanner.nextLine(); // read a line from the console
-
+                String command = scanner.nextLine();
                 if (QUIT_COMMAND.equals(command)) {
                     break;
                 }
-
 
                 BUFFER.clear();
                 BUFFER.put(command.getBytes(StandardCharsets.UTF_8));
@@ -59,8 +56,7 @@ public class Client {
 
                 byte[] byteArray = new byte[BUFFER.remaining()];
                 BUFFER.get(byteArray);
-                String reply = new String(byteArray, StandardCharsets.UTF_8); // buffer drain
-
+                String reply = new String(byteArray, StandardCharsets.UTF_8);
 
                 System.out.println(reply);
             }

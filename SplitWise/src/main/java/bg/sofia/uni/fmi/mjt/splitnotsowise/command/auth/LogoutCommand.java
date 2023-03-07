@@ -2,7 +2,6 @@ package bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth;
 
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
 
 public class LogoutCommand implements Command {
@@ -17,7 +16,7 @@ public class LogoutCommand implements Command {
     }
 
     @Override
-    public String execute(Logger logger) {
+    public String execute() {
         if (!ConnectionObserver.removeConnection(socketChannel)) {
             return UNSUCCESSFUL;
         }

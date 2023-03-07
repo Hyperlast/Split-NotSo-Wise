@@ -5,11 +5,11 @@ import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandParser;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 public class SplitGroupCommand implements Command {
 
@@ -31,7 +31,7 @@ public class SplitGroupCommand implements Command {
     }
 
     @Override
-    public String execute(Logger logger) {
+    public String execute() {
 
         try {
             CommandParser.checkIfCorrect(args[AMOUNT]);
@@ -45,11 +45,12 @@ public class SplitGroupCommand implements Command {
 
             User user = CommandRunner.getUser(socketChannel);
 
-            CommandRunner.updateRepoSplitWithGroup(args[GROUP_NAME], user, amount, args[REASON]);
+            CommandRunner.updateRepoSplitWithGroup(args[GROUP_NAME], user, amount, String.join(" ",
+                    Arrays.copyOfRange(args, REASON, args.length)));
 
             return SUCCESS;
         } catch (Exception e) {
-            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            LOGGER.log(OutputCreator.getFullExceptionMessage(e), LOGGER.getLogWriter());
             return e.getMessage();
         }
     }

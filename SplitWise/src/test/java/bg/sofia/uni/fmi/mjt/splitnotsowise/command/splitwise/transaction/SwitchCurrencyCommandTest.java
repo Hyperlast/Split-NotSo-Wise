@@ -14,6 +14,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 
@@ -29,7 +30,6 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.mock;
 
-import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -37,6 +37,9 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class SwitchCurrencyCommandTest {
+
+    @Mock
+    Logger log;
 
     public final LoginCommand loginCommand = new LoginCommand(loginArgs, ADMIN_ADDRESS);
     public final LogoutCommand logoutCommand = new LogoutCommand(ADMIN_ADDRESS);
@@ -52,6 +55,7 @@ class SwitchCurrencyCommandTest {
     @BeforeEach
     void initToggle() {
         CommandRunner.toggleSaveToDefaultFiles();
+        loginCommand.execute(logger);
     }
 
     @AfterEach
@@ -61,7 +65,7 @@ class SwitchCurrencyCommandTest {
 
     @Test
     void testSwitchCurrencyNotLogged() {
-        Logger log = mock(Logger.class);
+        logoutCommand.execute(logger);
         SwitchCurrencyCommand switchCurrencyCommand = new SwitchCurrencyCommand(ADMIN_ADDRESS,"BGN");
 
         switchCurrencyCommand.execute(log);
@@ -70,7 +74,7 @@ class SwitchCurrencyCommandTest {
 
     @Test
     void testSwitchCurrencyUnsupportedCurrency() {
-        loginCommand.execute(logger);
+
         SwitchCurrencyCommand switchCurrencyCommand = new SwitchCurrencyCommand(ADMIN_ADDRESS,"AZT");
         assertEquals(Currency.UNKNOWN.getLabel(), switchCurrencyCommand.execute(logger),
                 "Expected unknown currency message");
@@ -80,8 +84,6 @@ class SwitchCurrencyCommandTest {
 
     @Test
     void testSwitchCurrencyCouldNotSet() throws BadResponseException, IOException, InterruptedException {
-        loginCommand.execute(logger);
-        Logger log = mock(Logger.class);
 
         when(exchange.canQuery()).thenReturn(true);
         when(exchange.getExchange(any())).thenReturn(true);

@@ -2,7 +2,6 @@ package bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth;
 
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.PasswordUtils;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
@@ -25,7 +24,7 @@ public class RegisterCommand implements Command {
         this.socketChannel = socketChannel;
     }
     @Override
-    public String execute(Logger logger) {
+    public String execute() {
         try {
             ConnectionObserver.isNotLogged(socketChannel);
             PasswordUtils.verifyPasswordRegex(parameters[PASSWORD]);
@@ -35,7 +34,7 @@ public class RegisterCommand implements Command {
 
             return SUCCESS;
         } catch (Exception e) {
-            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            LOGGER.log(OutputCreator.getFullExceptionMessage(e), LOGGER.getLogWriter());
             return e.getMessage();
         }
     }

@@ -1,5 +1,6 @@
 package bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository;
 
+import bg.sofia.uni.fmi.mjt.splitnotsowise.command.Command;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.ClientHistory;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.UserParsed;
@@ -147,25 +148,18 @@ public class UserRegistry {
     public void updateUserInfoMap(Writer writer) {
         if (!userInfo.isEmpty()) {
             gson.toJson(new UserParsed(userInfo), UserParsed.class, writer);
-            System.out.println(userInfo.toString());
         }
 
     }
 
     private void parseLoader(Map<String, User> loader) {
         Map<String, GroupListManager> groupMatcher = new HashMap<>();
-        Map<String, FriendListManager> friendMatcher = new HashMap<>();
         Map<String, String> credentials = new HashMap<>();
 
         for (User user : loader.values()) {
             user.getGroups().entrySet()
                     .forEach(set -> {
-                        fillMap(groupMatcher, set.getKey(), set);
-                    });
-
-            user.getFriends().entrySet()
-                    .forEach(set -> {
-                        fillMap(friendMatcher, set.getKey(), set);
+                        fillGroupMap(groupMatcher, set.getKey(), set);
                     });
 
             credentials.put(user.getUsername(), user.getHashedPass());
@@ -174,13 +168,28 @@ public class UserRegistry {
         this.userCredentials = credentials;
         this.groups = groupMatcher;
         this.userInfo = loader;
+
+        for (User user : loader.values()) {
+            for (Map.Entry<String, FriendListManager> curr : user.getFriends().entrySet()) {
+                User friend = null;
+                try {
+                    friend = getUserEntity(curr.getKey());
+                } catch (NoSuchEntityException e) {
+                    Command.LOGGER.log(e.getMessage(), Command.LOGGER.getLogWriter());
+                    continue;
+                }
+                friend.getFriends().put(user.getUsername(), curr.getValue());
+            }
+        }
     }
 
-    private <T extends GroupListManager> void fillMap(Map<String, T> map, String name, Map.Entry<String, T> user) {
+    private void fillGroupMap(Map<String, GroupListManager> map, String name,
+                                                           Map.Entry<String, GroupListManager> user) {
         if (map.containsKey(name)) {
             user.setValue(map.get(name));
         } else {
             map.put(name, user.getValue());
         }
     }
+
 }

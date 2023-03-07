@@ -25,7 +25,7 @@ public class AddFriendCommand implements Command {
     }
 
     @Override
-    public String execute(Logger logger) {
+    public String execute() {
 
         try {
             ConnectionObserver.isLogged(socketChannel);
@@ -40,7 +40,7 @@ public class AddFriendCommand implements Command {
             return String.format(SUCCESS, args[FRIEND_USERNAME]);
 
         } catch (Exception e) {
-            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            LOGGER.log(OutputCreator.getFullExceptionMessage(e), LOGGER.getLogWriter());
             return e.getMessage();
         }
     }

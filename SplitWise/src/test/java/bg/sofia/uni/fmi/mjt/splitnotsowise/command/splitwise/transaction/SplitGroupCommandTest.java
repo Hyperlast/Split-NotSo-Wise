@@ -13,6 +13,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static bg.sofia.uni.fmi.mjt.splitnotsowise.command.TestUtils.logger;
@@ -27,6 +28,9 @@ import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
 class SplitGroupCommandTest {
+
+    @Mock
+    Logger log;
     private static final String[] DEFAULT_FRIEND_PARAMS = "register friend1 Friend1!".split(SPACE_DELIMITER);
     private static final String DEFAULT_FRIEND_SOCKET_NAME = "FRIEND";
     public static final LoginCommand loginCommand = new LoginCommand(loginArgs, "ADDRESS");
@@ -53,6 +57,7 @@ class SplitGroupCommandTest {
     @BeforeEach
     void initToggle() {
         CommandRunner.toggleSaveToDefaultFiles();
+        loginCommand.execute(logger);
     }
 
     @AfterEach
@@ -62,49 +67,46 @@ class SplitGroupCommandTest {
 
     @Test
     void testSplitGroupNotLoggedIn() {
-        Logger log = mock(Logger.class);
+        logoutCommand.execute(logger);
         String[] args = "split-group 5 group1 clinton".split(SPACE_DELIMITER);
         SplitGroupCommand payedCommand = new SplitGroupCommand(args, ADMIN_ADDRESS);
+
         payedCommand.execute(log);
         verify(log,atLeastOnce()).log(anyString(),any());
     }
 
     @Test
     void testSplitGroupIncorrectAmount() {
-        Logger log = mock(Logger.class);
         String[] args = "split-group d5 group1 clinton".split(SPACE_DELIMITER);
         SplitGroupCommand payedCommand = new SplitGroupCommand(args, ADMIN_ADDRESS);
+
         payedCommand.execute(log);
         verify(log,atLeastOnce()).log(anyString(),any());
     }
 
     @Test
     void testSplitGroupNonExistentGroup() {
-        Logger log = mock(Logger.class);
-        loginCommand.execute(logger);
         String[] args = "split-group 5 group2 clinton".split(SPACE_DELIMITER);
         SplitGroupCommand payedCommand = new SplitGroupCommand(args, ADMIN_ADDRESS);
+
         payedCommand.execute(log);
         verify(log, never()).log(anyString(),any());
     }
 
     @Test
     void testSplitGroupNegativeAmount() {
-        Logger log = mock(Logger.class);
-        loginCommand.execute(logger);
         String[] args = "split-group -5 group1 clinton".split(SPACE_DELIMITER);
         SplitGroupCommand payedCommand = new SplitGroupCommand(args, ADMIN_ADDRESS);
+
         payedCommand.execute(log);
         verify(log,atLeastOnce()).log(anyString(),any());
     }
 
     @Test
     void testSplitGroup() {
-        Logger log = mock(Logger.class);
-
-        loginCommand.execute(logger);
         String[] args = "split-group 5 group1 clinton".split(SPACE_DELIMITER);
         SplitGroupCommand payedCommand = new SplitGroupCommand(args, ADMIN_ADDRESS);
+
         payedCommand.execute(log);
         verify(log, never()).log(anyString(),any());
     }

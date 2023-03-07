@@ -116,7 +116,7 @@ public class User {
         builder.append("Friends:").append(System.lineSeparator());
 
         for (Map.Entry<String, FriendListManager> entry : friends.entrySet()) {
-            builder.append(entry.getValue().getStatus(entry.getKey(), username, currency))
+            builder.append(entry.getValue().getStatus(entry.getKey(), username, getCurrency()))
                     .append(System.lineSeparator());
         }
 
@@ -124,7 +124,7 @@ public class User {
 
         for (Map.Entry<String, GroupListManager> entry : groups.entrySet()) {
             builder.append("-").append(entry.getKey()).append(": ")
-                    .append(entry.getValue().getStatus(entry.getKey(), username, currency))
+                    .append(entry.getValue().getStatus(entry.getKey(), username, getCurrency()))
                     .append(System.lineSeparator());
         }
         return builder.toString();

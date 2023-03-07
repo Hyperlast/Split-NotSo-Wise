@@ -33,8 +33,8 @@ public class Logger {
         this.doesLog = builder.doesLog;
     }
 
-    public static LoggerBuilder builder(String path, String fileName){
-        return new LoggerBuilder(path,fileName);
+    public static LoggerBuilder builder(String path, String fileName) {
+        return new LoggerBuilder(path, fileName);
     }
 
     public static class LoggerBuilder {

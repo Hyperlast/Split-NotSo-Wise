@@ -5,7 +5,6 @@ import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.entity.User;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.ConnectionObserver;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.database.repository.GroupListManager;
-import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.Validator;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.utils.message.OutputCreator;
 
@@ -28,7 +27,7 @@ public class CreateGroupCommand implements Command {
     }
 
     @Override
-    public String execute(Logger logger) {
+    public String execute() {
         String[] users = Arrays.copyOfRange(args, GROUP_NAME + 1, args.length);
         try {
             ConnectionObserver.isLogged(socketChannel);
@@ -49,7 +48,7 @@ public class CreateGroupCommand implements Command {
 
             return "SuccessFully created the group";
         } catch (Exception e) {
-            logger.log(OutputCreator.getFullExceptionMessage(e), logger.getLogWriter());
+            LOGGER.log(OutputCreator.getFullExceptionMessage(e), LOGGER.getLogWriter());
             return e.getMessage();
         }
 

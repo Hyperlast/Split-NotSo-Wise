@@ -72,6 +72,12 @@ public class GroupListManager {
 
     public static String getDebtMessage(BigDecimal friendBalance, BigDecimal balance, Currency currency) {
         CurrencyCache cache = CurrencyCache.getInstance();
+        if (balance == null) {
+            balance = new BigDecimal(0);
+        }
+        if (friendBalance == null) {
+            friendBalance = new BigDecimal(0);
+        }
         int result = balance.compareTo(friendBalance);
 
         if (result == 0) {

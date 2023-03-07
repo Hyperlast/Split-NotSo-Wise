@@ -47,7 +47,7 @@ public class Server {
 
             Exchange.getInstance().addAPIKEY(keyReader.readLine());
 
-            InputHandler userHandler = new InputHandler(logger);
+            InputHandler userHandler = new InputHandler();
 
             Config config = new Config(logger);
             config.configFiles();
@@ -103,11 +103,8 @@ public class Server {
                         buffer.flip();
 
                         String line = StandardCharsets.UTF_8.decode(buffer).toString();
-                        System.out.println(line);
 
                         String response = userHandler.executeInput(line, sc.getRemoteAddress().toString());
-
-                        System.out.println(response);
                         sc.write(ByteBuffer.wrap(response.getBytes()));
 
                     } else if (key.isAcceptable()) {
@@ -115,7 +112,6 @@ public class Server {
                         SocketChannel socketChannel = sockChannel.accept();
                         socketChannel.configureBlocking(false);
                         socketChannel.register(selector, SelectionKey.OP_READ);
-                        System.out.println(socketChannel.getRemoteAddress().toString());
                     }
 
                     keyIterator.remove();

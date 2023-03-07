@@ -28,10 +28,10 @@ public final class CommandRunner {
 
     private static final UserRegistry REGISTRY = UserRegistry.getInstance();
 
-    private static boolean UPDATE_SERVER_FILES_TOGGLE = true;
+    private static boolean updateServerFilesToggle = true;
 
     public static void toggleSaveToDefaultFiles() {
-        UPDATE_SERVER_FILES_TOGGLE = false;
+        updateServerFilesToggle = false;
     }
 
     public static void addToSameGroup(String groupName, GroupListManager group, User user) throws IOException {
@@ -115,7 +115,7 @@ public final class CommandRunner {
 
         User initiator = REGISTRY.getUserEntity(initiatorUsername);
         User payer = REGISTRY.getUserEntity(payerUsername);
-        Currency fieldCurrency = payer.getCurrency();
+        Currency fieldCurrency = initiator.getCurrency();
 
         if (!initiator.isFriend(payerUsername)) {
             throw new NoSuchEntityException("Couldn't find a user with such name in your friend list");
@@ -186,8 +186,9 @@ public final class CommandRunner {
     }
 
     public static void updateTransaction() throws IOException {
-        if (UPDATE_SERVER_FILES_TOGGLE) {
-            try (BufferedWriter transactionWriter = new BufferedWriter(new FileWriter(Config.TRANSACTION_CONFIG_PATH))) {
+        if (updateServerFilesToggle) {
+            try (BufferedWriter transactionWriter = new BufferedWriter(
+                    new FileWriter(Config.TRANSACTION_CONFIG_PATH))) {
                 UserRegistry.getInstance().updateTransactionsMap(transactionWriter);
                 transactionWriter.flush();
             }
@@ -196,7 +197,7 @@ public final class CommandRunner {
     }
 
     public static void updateUserInfo() throws IOException {
-        if (UPDATE_SERVER_FILES_TOGGLE) {
+        if (updateServerFilesToggle) {
             try (BufferedWriter userWriter = new BufferedWriter(new FileWriter(Config.USER_CONFIG_PATH))) {
                 UserRegistry.getInstance().updateUserInfoMap(userWriter);
                 userWriter.flush();

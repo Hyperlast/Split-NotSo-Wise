@@ -4,6 +4,7 @@ import bg.sofia.uni.fmi.mjt.splitnotsowise.command.CommandRunner;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LoginCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.LogoutCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.command.auth.RegisterCommand;
+import bg.sofia.uni.fmi.mjt.splitnotsowise.command.splitwise.social.misc.TransactionCommand;
 import bg.sofia.uni.fmi.mjt.splitnotsowise.log.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
